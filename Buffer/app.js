@@ -13,7 +13,7 @@ console.log(memoryContainer[1])
 console.log(memoryContainer[2])
 console.log(memoryContainer[3])
 
-console.log(memortContainer.toString('hex'))
+console.log(memoryContainer.toString('hex'))
 
 // const buff=Buffer.from([0x48,0x69,0x21])
 // console.log(buff.toString('utf-8'))
