@@ -11,7 +11,7 @@ const filePath = path.join(__dirname, "command.txt");
 
     const createFile=async(filePath)=>{
         try{
-            const existingFileHandle=await fs.open(path,"r");
+            const existingFileHandle=await fs.open(filePath,"r");
             existingFileHandle.close();
 
             return console.log(`The file ${filePath} already exists`);
@@ -50,7 +50,7 @@ const filePath = path.join(__dirname, "command.txt");
 
     const addToFile=async(filePath,content)=>{
         try{
-            await fs.open(filePath,"a")
+            await fs.appendFile(filePath,content)
             console.log("content added successfully.")
         } catch(e) {
             if(e.code==="ENOENT") {
